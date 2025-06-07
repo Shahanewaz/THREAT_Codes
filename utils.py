@@ -5,8 +5,7 @@ from transformers import pipeline
 import json
 
 # === API Setup ===
-openai.api_key = "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"  
-# openai.api_key = "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"
+openai.api_key = ""  
 
 # === Semantic Similarity Model ===
 # sbert_model = SentenceTransformer('all-MiniLM-L6-v2')
