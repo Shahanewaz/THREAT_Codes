@@ -2,10 +2,10 @@ import pandas as pd
 import os
 
 # Load the CSV file
-dir1 = "../../../HarmfulQADataset"
+dir1 = "../HarmfulQADataset"
 df = pd.read_csv(os.path.join(dir1, "harmfulqa.csv"))
 
-dir2 = "../../../Results/Safe_version/HarmfulQADataset"
+dir2 = "../Results/Safe_version/HarmfulQADataset"
 df2 = pd.read_csv(os.path.join(dir2, "responses_with_refusal_flag.csv"))
 
 # Clean 'conversation_type' values and drop rows with missing text
