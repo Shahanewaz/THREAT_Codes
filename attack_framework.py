@@ -1,3 +1,5 @@
+# The safety score variable $\lambda$ was hard coded to be 0.95
+
 from single_step_attack import SafePromptAttack
 
 def IterativeSafePromptAttack(x_init, f_safe, S, epsilon1, epsilon2, N, max_iters):
