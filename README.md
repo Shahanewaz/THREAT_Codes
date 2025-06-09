@@ -126,12 +126,42 @@ The table below walks through one cycle of our THREAT framework, showing each pr
 # Comparison of Refusal Rates: Baseline vs. THREAT-Optimized Prompts
 <div align="center">
 
-| Dataset | Refusal Rate on Original Prompt | Refusal Rate on THREAT-derived Prompt |
-|---|---|---|
-| HarmfulQA | 794  / 1938 | 0 / 1938 |
-| Discrimination | 302 / 815 | 2 / 815 |
-| Information Hazards | 846 / 1390 | 15 / 1390 |
-| System Risks | 674 / 1142 | 5 / 1142 |
+<table align="center">
+  <colgroup>
+    <col width="33%" />
+    <col width="33%" />
+    <col width="33%" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th align="center">Dataset</th>
+      <th align="center">Original Refusal Rate</th>
+      <th align="center">THREAT‐Derived Refusal Rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">HarmfulQA</td>
+      <td align="center">794 / 1938</td>
+      <td align="center">0 / 1938</td>
+    </tr>
+    <tr>
+      <td align="center">Discrimination</td>
+      <td align="center">302 / 815</td>
+      <td align="center">2 / 815</td>
+    </tr>
+    <tr>
+      <td align="center">Information Hazards</td>
+      <td align="center">846 / 1390</td>
+      <td align="center">15 / 1390</td>
+    </tr>
+    <tr>
+      <td align="center">System Risks</td>
+      <td align="center">674 / 1142</td>
+      <td align="center">5 / 1142</td>
+    </tr>
+  </tbody>
+</table>
 
 </div>
 
@@ -158,12 +188,36 @@ The Jensen–Shannon divergence (JSD) between red-score and blue-score distribut
 
 <div align="center">
   
-| Dataset | JSD |
-|---|---|
-| HarmfulQA | 0.692 |
-| Discrimination | 0.603 |
-| Information Hazards | 0.572 |
-| System Risks | 0.653 |
+<table align="center">
+  <colgroup>
+    <col width="50%" />
+    <col width="50%" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th align="center">Dataset</th>
+      <th align="center">JSD</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">HarmfulQA</td>
+      <td align="center">0.692</td>
+    </tr>
+    <tr>
+      <td align="center">Discrimination</td>
+      <td align="center">0.603</td>
+    </tr>
+    <tr>
+      <td align="center">Information Hazards</td>
+      <td align="center">0.572</td>
+    </tr>
+    <tr>
+      <td align="center">System Risks</td>
+      <td align="center">0.653</td>
+    </tr>
+  </tbody>
+</table>
 
 </div>
 
