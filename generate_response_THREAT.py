@@ -39,4 +39,4 @@ for prompt in tqdm(df['optimized_question'], desc = "Generating Responses"):
 df['response'] = responses
 
 # Save updated dataframe
-df.to_csv(os.path.join(dir, "dataset_with_original_response.csv"), index = False)
+df.to_csv(os.path.join(dir, "dataset_with_original_and_optimized_response.csv"), index = False)
