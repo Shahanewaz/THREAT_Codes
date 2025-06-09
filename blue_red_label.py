@@ -10,12 +10,15 @@ tqdm.pandas()
 # Load the semantic model
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
-dir = "../../../Results/Safe_version/Gretel-safety-alignment/System_Risks" 
+# dir1 = "../../../Results/Safe_version/HarmfulQADataset"
 # df = pd.read_csv(os.path.join(dir, "responses_with_blue_and_red_responses.csv"))
-df = pd.read_csv(os.path.join(dir, "responses_with_refusal_flag_df_2.csv"))
+
+dir = "../../../Results/Safe_version/Gretel-safety-alignment/System_Risks" 
+df = pd.read_csv(os.path.join(dir, "responses_with_refusal_flag.csv"))
 
 # Function to process a row and compute semantic alignment
 # The following is for hamfulqa
+
 """
 def compute_scores(row):
     response = row['response']
@@ -118,4 +121,4 @@ def compute_scores(row):
 # This is for gretel
 scores_df = df.progress_apply(compute_scores, axis = 1)
 df = pd.concat([df, scores_df], axis = 1)
-df.to_csv(os.path.join(dir, "responses_with_blue_and_red_label_new_df_2.csv"), index = False)
+df.to_csv(os.path.join(dir, "responses_with_blue_and_red_label.csv"), index = False)
