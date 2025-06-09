@@ -35,27 +35,39 @@ This repository contains the codes for THREAT: Targeted Hypergaming via Reframin
 
 1. Generate the original response (without applying the THREAT framework):
 
-```python generate_response_original.py```
+<p align="center">
+  <code>python generate_response_original.py</code>
+</p>
 
 2. Apply the THREAT framework to get the optimized prompts for each original prompt:
 
-```python main_dataset.py```
+<p align="center">
+  <code>python python main_dataset.py</code>
+</p>
 
 3. Generate responses for the optimized prompts:
 
-```python generate_response_THREAT.py```
+<p align="center">
+  <code>python generate_response_THREAT.py</code>
+</p>
 
 4. Compute refusal counts for original vs. THREAT-derived prompts:
 
-```python compute_refusal.py```
+<p align="center">
+  <code>python compute_refusal.py</code>
+</p>
 
 5. Enumerate blue and red reference responses corresponding to each prompt:
 
-```python blue_and_red.py```
+<p align="center">
+  <code>python blue_and_red.py</code>
+</p>
 
 6. Assign labels to each response:
 
-```python blue_red_label.py```
+<p align="center">
+  <code>python blue_red_label.py</code>
+</p>
 
 # Main Result:
 
@@ -106,8 +118,28 @@ The Jensen–Shannon divergence (JSD) between red-score and blue-score distribut
 # Refusal Count as a Function of Red–Blue Score Difference
 
 <p align="center">
-  <img src="refusal_by_diff_bins_HarmfulQADataset.png" alt="HarmfulQA" width="45%" />
-  <img src="refusal_by_diff_bins_Gretel-safety-alignment_System_Risks.png" alt="System Risks" width="45%" />
+  <img src="Figures/refusal_by_diff_bins_HarmfulQADataset.png" alt="HarmfulQA" width="45%" />
+  <img src="Figures/refusal_by_diff_bins_Gretel-safety-alignment_System_Risks.png" alt="System Risks" width="45%" />
 </p>
 
 *Figure 4: Refusal counts for the original prompts, categorized by intervals of the difference between red‐ and blue‐scores; the values displayed above each bar indicate the corresponding refusal counts for our THREAT‐derived prompts.*
+
+# Distribution of Safety Reward Gain by Label
+
+<div align="center">
+  
+![Box Plot by Label](Figures/safe_gain_by_label_HarmfulQADataset.png)
+
+</div>
+
+*Figure 5: Boxplots of overall reward safety gains classified by predicted label on the HarmfulQA dataset. Notably, "Blue" predictions exhibit a higher median overall reward safety gain, whereas "Red" predictions display a lower median.*
+
+# Distribution of Red and Blue Predictions by Judge Response Score
+
+<div align="center">
+  
+![Box Plot by Label](Figures/red_blue_percentage_Gretel-safety-alignment_System_Risks.png)
+
+</div>
+
+*Figure 6: Distribution of Red and Blue Predictions by Judge Response Score in the System Risks Dataset. As the judge-assigned score increases, the proportion of Red predictions decreases, with low scores corresponding predominantly to Red responses and higher scores yielding a more balanced distribution between Red and Blue classifications.*
