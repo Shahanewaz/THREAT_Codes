@@ -1,5 +1,24 @@
 This repository contains the codes for THREAT: Targeted Hypergaming via Reframing and Exploitation of Adversarial Tactics
 
+## Folder Structure
+
+├── Code
+│ ├── attack_framework.py
+│ └── blue_and_red.py
+│ └── blue_red_label.py
+│ └── compute_refusal.py
+│ └── generate_response_THREAT.py
+│ └── generate_response_original.py
+│ └── llm_generation.py
+│ └── main_dataset.py
+│ └── prompt_optimizer.py
+│ └── single_step_attack.py
+│ └── utils.py
+├── Result
+│ ├── App.js
+│ └── utils
+│ └── helpers.js
+
 The main code is main_dataset.py. The required command is: ```python main_dataset.py```
 
 Main Result:
