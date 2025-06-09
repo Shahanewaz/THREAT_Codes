@@ -69,7 +69,7 @@ This repository contains the codes for THREAT: Targeted Hypergaming via Reframin
   <code>python blue_red_label.py</code>
 </p>
 
-# Main Result:
+# Main Results:
 
 # Comparison of Refusal Rates: Baseline vs. THREAT-Optimized Prompts
 <div align="center">
