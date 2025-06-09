@@ -14,10 +14,10 @@ tqdm.pandas()
 # Load the semantic model
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
-# dir1 = "../../../Results/Safe_version/HarmfulQADataset"
+# dir1 = "../Results/Safe_version/HarmfulQADataset"
 # df = pd.read_csv(os.path.join(dir, "responses_with_blue_and_red_responses.csv"))
 
-dir = "../../../Results/Safe_version/Gretel-safety-alignment/System_Risks" 
+dir = "../Results/Safe_version/Gretel-safety-alignment/System_Risks" 
 df = pd.read_csv(os.path.join(dir, "responses_with_refusal_flag.csv"))
 
 # Function to process a row and compute semantic alignment
