@@ -85,7 +85,7 @@ The table below walks through one cycle of our THREAT framework, showing each pr
 
 # Code Outline
 
-## Steps
+## Usage Instructions
 
 1. Generate the original response (without applying the THREAT framework):
 
