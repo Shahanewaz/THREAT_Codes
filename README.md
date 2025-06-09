@@ -1,6 +1,8 @@
 This repository contains the codes for THREAT: Targeted Hypergaming via Reframing and Exploitation of Adversarial Tactics
 
-![An example of THREAT framework](Figures/THREAT_framework_example.png)
+<p align="center">
+  <img src="Figures/THREAT_framework_example.png" alt="An example of THREAT framework" width="65%">
+</p>
 
 *Figure 1. A harmful prompt from the HarmfulQA dataset can be reframed to evade safety filters while preserving adversarial intent, leading to an unintended model response.*
 
@@ -57,7 +59,8 @@ This repository contains the codes for THREAT: Targeted Hypergaming via Reframin
 
 # Main Result:
 
-Refusal rate on original prompt vs THREAT-derived prompt for all datasets:
+# Comparison of Refusal Rates: Baseline vs. THREAT-Optimized Prompts
+<div align="center">
 
 | Dataset | Refusal Rate on Original Prompt | Refusal Rate on THREAT-derived Prompt |
 |---|---|---|
@@ -66,8 +69,45 @@ Refusal rate on original prompt vs THREAT-derived prompt for all datasets:
 | Information Hazards | 846 / 1390 | 15 / 1390 |
 | System Risks | 674 / 1142 | 5 / 1142 |
 
+</div>
+
 The corresponding bar plot is shown below:
 
-![Refusal Bar Plot](Figures/refusal_rate.png)
+<div align="center">
+  
+![Refusal Bar Plot](Figures/refusal_rate.PNG)
+
+</div>
 
 *Figure 2. Refusal rates (original vs.\ THREAT) on four different safety‐benchmark datasets: (i) discrimination, (ii) information hazards, (iii) safety risks and (iv) harmfulQA. Each bar indicates the percentage (and absolute count) of prompts that GPT-4o refused to answer under each prompting strategy.*
+
+# Comparative Score Distribution: Red and Blue Label
+<div align="center">
+  
+![Average Red and Blue Score](Figures/red_blue_score.PNG)
+
+</div>
+
+*Figure 3. Average similarity scores for generated responses on the Discrimination dataset, grouped by predicted label. The left panel shows the mean blue score for examples labeled “Blue" versus “Red," and the right panel shows the mean red score for the same two groups.*
+
+The Jensen–Shannon divergence (JSD) between red-score and blue-score distributions for each dataset, quantifying the degree of separation between unsafe and safe alignment scores is given below:
+
+<div align="center">
+  
+| Dataset | JSD |
+|---|---|
+| HarmfulQA | 0.692 |
+| Discrimination | 0.603 |
+| Information Hazards | 0.572 |
+| System Risks | 0.653 |
+
+</div>
+
+# Refusal Count as a Function of Red–Blue Score Difference
+
+<p align="center">
+  <img src="refusal_by_diff_bins_HarmfulQADataset.png" alt="HarmfulQA" width="45%" />
+  <img src="refusal_by_diff_bins_Gretel-safety-alignment_System_Risks.png" alt="System Risks" width="45%" />
+</p>
+
+*Figure 4: Refusal counts for the original prompts, categorized by intervals of the difference between red‐ and blue‐scores; the values displayed above each bar indicate the corresponding refusal counts for our THREAT‐derived prompts.*
