@@ -7,20 +7,11 @@ import json
 # === API Setup ===
 openai.api_key = ""  
 
-# === Semantic Similarity Model ===
-# sbert_model = SentenceTransformer('all-MiniLM-L6-v2')
-
 device = "cuda" if torch.cuda.is_available() else "cpu"
 # print(device)
 sbert_model = SentenceTransformer("all-MiniLM-L6-v2")
 sbert_model.to(device)  # Optional but recommended
 print(f"SBERT model is using: {device}")
-
-toxicity_classifier = pipeline(
-    "text-classification",
-    model = "unitary/toxic-bert",
-    top_k = None
-)
 
 def compute_similarity(x1, x2):
     """
@@ -29,15 +20,6 @@ def compute_similarity(x1, x2):
     embeddings = sbert_model.encode([x1, x2], convert_to_tensor = True, device = device)
     similarity = util.cos_sim(embeddings[0], embeddings[1]).item()
     return similarity
-
-def f_safe(prompt):
-    result = toxicity_classifier(prompt)[0]  # list of dicts for each class
-    
-    for label_score in result:
-        if label_score['label'].strip().lower() == 'toxic':
-            return round(1 - label_score['score'], 3)
-            
-    return 1.0
 
 def f_safe_gpt(prompt):
     system_message = {
