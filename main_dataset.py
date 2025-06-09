@@ -41,22 +41,11 @@ def optimize_dataset(input_path, output_path):
     print(f"Optimization complete. Results saved to: {output_path}")
 
 if __name__ == "__main__":
-    # dir1 = "../../../Results/Safe_version/HarmfulQADataset"  
     dir1 = "../../../Results/Safe_version/Gretel-safety-alignment/System_Risks"
 
     os.makedirs(dir1, exist_ok = True)
-
-    # input_file = os.path.join(dir1, "unique_questions.csv")
-    # input_file = os.path.join(dir1, "questions_filtered.csv")
-    # output_file = os.path.join(dir1, "optimized_questions.csv")
-    # output_file = os.path.join(dir1, "optimized_questions_filtered.csv")
-    input_file = os.path.join(dir1, "questions_filtered_df_2.csv")
     
-    # input_file = os.path.join(dir1, "responses_with_refusal_flag.csv")
-    # output_file = os.path.join(dir1, "optimized_questions.csv")
-    
-    # input_file = os.path.join(dir1, "optimized_questions.csv")
-    # output_file = os.path.join(dir1, "optimized_questions_fltered_output.csv")
-    output_file = os.path.join(dir1, "optimized_questions_fltered_output_df_2.csv")
+    input_file = os.path.join(dir1, "sample_dataset.csv")
+    output_file = os.path.join(dir1, "optimized_questions.csv")
     
     optimize_dataset(input_file, output_file)
