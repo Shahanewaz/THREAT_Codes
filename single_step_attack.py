@@ -6,7 +6,6 @@ def SafePromptAttack(x, f_safe, S, epsilon1, epsilon2, N):
     Finds the most safe semantically similar variant of the prompt x.
     """
     base_score = f_safe(x)
-    # print(base_score)
     
     R_best = float('-inf')
     x_best = None
