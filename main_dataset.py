@@ -45,7 +45,7 @@ if __name__ == "__main__":
 
     os.makedirs(dir1, exist_ok = True)
     
-    input_file = os.path.join(dir1, "sample_dataset.csv")
+    input_file = os.path.join(dir1, "dataset_with_original_response.csv")
     output_file = os.path.join(dir1, "optimized_questions.csv")
     
     optimize_dataset(input_file, output_file)
