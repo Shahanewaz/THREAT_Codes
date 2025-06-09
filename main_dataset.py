@@ -40,7 +40,7 @@ def optimize_dataset(input_path, output_path):
     print(f"Optimization complete. Results saved to: {output_path}")
 
 if __name__ == "__main__":
-    dir1 = "../Results/Safe_version/Gretel-safety-alignment/System_Risks"
+    dir1 = "../Results/Gretel-safety-alignment/System_Risks"
 
     os.makedirs(dir1, exist_ok = True)
     
