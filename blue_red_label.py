@@ -1,3 +1,7 @@
+# The final dataframes in the Final_Dataframe folder is the output of this code.
+# Thus, the final dataframe will be named as "responses_with_blue_and_red_label.csv" in the respective folder.
+# In this github, we put them together in the Final_Dataframe folder and renamed them accordingly
+
 from sentence_transformers import SentenceTransformer, util
 import numpy as np
 import pandas as pd
