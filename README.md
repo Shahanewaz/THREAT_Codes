@@ -1,7 +1,8 @@
 This repository contains the codes for THREAT: Targeted Hypergaming via Reframing and Exploitation of Adversarial Tactics
 
-## Folder Structure
+# Folder Structure
 
+```
 ├── Code
 │ ├── attack_framework.py
 │ └── blue_and_red.py
@@ -15,13 +16,42 @@ This repository contains the codes for THREAT: Targeted Hypergaming via Reframin
 │ └── single_step_attack.py
 │ └── utils.py
 ├── Result
-│ ├── App.js
-│ └── utils
-│ └── helpers.js
+│ ├── Gretel-safety-alignment
+│ │ ├── Discrimination
+│ │ └── Information_Hazards
+│ │ └── System_Risks
+│ └── HarmfulQADataset
+```
 
-The main code is main_dataset.py. The required command is: ```python main_dataset.py```
+# Code Outline
 
-Main Result:
+## Steps
+
+1. Generate the original response (without applying the THREAT framework):
+
+```python generate_response_original.py```
+
+2. Apply the THREAT framework to get the optimized prompts for each original prompt:
+
+```python main_dataset.py```
+
+3. Generate responses for the optimized prompts:
+
+```python generate_response_THREAT.py```
+
+4. Compute refusal counts for original vs. THREAT-derived prompts:
+
+```python compute_refusal.py```
+
+5. Enumerate blue and red reference responses corresponding to each prompt:
+
+```python blue_and_red.py```
+
+6. Assign labels to each response:
+
+```python blue_red_label.py```
+
+# Main Result:
 
 Refusal rate on original prompt vs THREAT-driven prompt for all datasets
 
