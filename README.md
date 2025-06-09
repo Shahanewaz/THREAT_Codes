@@ -1,5 +1,9 @@
 This repository contains the codes for THREAT: Targeted Hypergaming via Reframing and Exploitation of Adversarial Tactics
 
+![An example of THREAT framework](Figures/THREAT_framework_example.png)
+
+*Figure 1. A harmful prompt from the HarmfulQA dataset can be reframed to evade safety filters while preserving adversarial intent, leading to an unintended model response.*
+
 # Folder Structure
 
 ```
@@ -53,7 +57,7 @@ This repository contains the codes for THREAT: Targeted Hypergaming via Reframin
 
 # Main Result:
 
-Refusal rate on original prompt vs THREAT-driven prompt for all datasets
+Refusal rate on original prompt vs THREAT-derived prompt for all datasets:
 
 | Dataset | Refusal Rate on Original Prompt | Refusal Rate on THREAT-derived Prompt |
 |---|---|---|
@@ -61,3 +65,9 @@ Refusal rate on original prompt vs THREAT-driven prompt for all datasets
 | Discrimination | 302 / 815 | 2 / 815 |
 | Information Hazards | 846 / 1390 | 15 / 1390 |
 | System Risks | 674 / 1142 | 5 / 1142 |
+
+The corresponding bar plot is shown below:
+
+![Refusal Bar Plot](Figures/refusal_rate.png)
+
+*Figure 2. Refusal rates (original vs.\ THREAT) on four different safety‐benchmark datasets: (i) discrimination, (ii) information hazards, (iii) safety risks and (iv) harmfulQA. Each bar indicates the percentage (and absolute count) of prompts that GPT-4o refused to answer under each prompting strategy.*
