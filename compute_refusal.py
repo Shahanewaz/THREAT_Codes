@@ -3,7 +3,7 @@ import re
 import os
 
 # Sample: assume your DataFrame is called df and the column with responses is 'response'
-dir = "../Results/Safe_version/Gretel-safety-alignment/System_Risks"
+dir = "../Results/Gretel-safety-alignment/System_Risks"
 df = pd.read_csv(os.path.join(dir, "dataset_with_original_and_optimized_response.csv"))
 
 # Define common refusal patterns
