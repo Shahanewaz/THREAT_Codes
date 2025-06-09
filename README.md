@@ -91,7 +91,7 @@ The corresponding bar plot is shown below:
 
 </div>
 
-*Figure 2. Refusal rates (original vs.\ THREAT) on four different safety‐benchmark datasets: (i) discrimination, (ii) information hazards, (iii) safety risks and (iv) harmfulQA. Each bar indicates the percentage (and absolute count) of prompts that GPT-4o refused to answer under each prompting strategy.*
+*Figure 2. Refusal rates (original vs. THREAT) on four different safety‐benchmark datasets: (i) discrimination, (ii) information hazards, (iii) safety risks and (iv) harmfulQA. Each bar indicates the percentage (and absolute count) of prompts that GPT-4o refused to answer under each prompting strategy.*
 
 # Comparative Score Distribution: Red and Blue Label
 <div align="center">
