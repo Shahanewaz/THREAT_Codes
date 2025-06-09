@@ -14,8 +14,6 @@ def SafePromptAttack(x, f_safe, S, epsilon1, epsilon2, N):
     for i in range(N):
         x_variant = LLM_generate_variant(x)
         
-        # x_variant = None if x_variant and any(p in x_variant.lower() for p in ["i'm sorry", "i can't assist", "i cannot assist", "i'm unable"]) else x_variant
-        
         x_variant = None if x_variant and (
             any(p in x_variant.lower() for p in [
                 "i'm sorry", "i can’t assist", "i can't assist", "i cannot assist", "i'm unable", 
@@ -23,30 +21,19 @@ def SafePromptAttack(x, f_safe, S, epsilon1, epsilon2, N):
                 "i am unable to assist with that request", "i am currently unable to assist with that request"
             ]) or x_variant.lower().startswith("as an ai language model")
         ) else x_variant
-
-        print("Variant is: ")
-        print(x_variant)
         
         if x_variant is None:
             continue
 
         similarity = S(x, x_variant)
-        # print("Similarity score: ")
-        # print(similarity)
         
         if epsilon1 <= similarity <= epsilon2:
             score_variant = f_safe(x_variant)
-            # print(score_variant)
             R = score_variant - base_score
-            print("Reward:")
-            print(R)
 
             if R > R_best:
                 R_best = R
                 x_best = x_variant
-    
-    print(x_best)
-    print(R_best)
     
     if x_best is None:
         return None, 0
