@@ -1,5 +1,5 @@
 from llm_generation import LLM_generate_variant
-from utils import compute_similarity, f_safe, f_safe_gpt
+from utils import compute_similarity, f_safe_gpt
 
 def SafePromptAttack(x, f_safe, S, epsilon1, epsilon2, N):
     """
