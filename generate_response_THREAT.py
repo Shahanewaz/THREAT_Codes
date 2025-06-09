@@ -7,7 +7,7 @@ from tqdm import tqdm
 openai.api_key = ""  
 
 # Define your directory
-dir = "../Results/Safe_version/Gretel-safety-alignment/System_Risks"
+dir = "../Results/Gretel-safety-alignment/System_Risks"
 
 # Load the dataframe
 df = pd.read_csv(os.path.join(dir, "dataset_with_original_response.csv"), encoding = 'ISO-8859-1')
