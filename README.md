@@ -96,7 +96,7 @@ The table below walks through one cycle of our THREAT framework, showing each pr
 2. Apply the THREAT framework to get the optimized prompts for each original prompt:
 
 <p align="center">
-  <code>python python main_dataset.py</code>
+  <code>python main_dataset.py</code>
 </p>
 
 3. Generate responses for the optimized prompts:
