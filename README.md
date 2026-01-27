@@ -1,4 +1,4 @@
-# THREAT: Targeted Hypergaming via Reframing and Exploitation of Adversarial Tactics
+# THREAT: Targeted Harmful generation via Reframing and Exploitation of Adversarial Tactics
 
 This repository contains the codes for THREAT: Targeted Hypergaming via Reframing and Exploitation of Adversarial Tactics
 
